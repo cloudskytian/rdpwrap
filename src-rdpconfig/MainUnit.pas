@@ -534,15 +534,15 @@ begin
   CheckSupp := False;
   case IsWrapperInstalled(WrapperPath) of
     -1: begin
-      lsWrapper.Caption := 'Unknown';
+      lsWrapper.Caption := '未知';
       lsWrapper.Font.Color := clGrayText;
     end;
     0: begin
-      lsWrapper.Caption := 'Not installed';
+      lsWrapper.Caption := '未安装';
       lsWrapper.Font.Color := clGrayText;
     end;
     1: begin
-      lsWrapper.Caption := 'Installed';
+      lsWrapper.Caption := '已安装';
       lsWrapper.Font.Color := clGreen;
       CheckSupp := True;
       INIPath := ExtractFilePath(ExpandPath(WrapperPath)) + 'rdpwrap.ini';
@@ -550,49 +550,49 @@ begin
         CheckSupp := False;
     end;
     2: begin
-      lsWrapper.Caption := '3rd-party';
+      lsWrapper.Caption := '第三方';
       lsWrapper.Font.Color := clRed;
     end;
   end;
   case GetTermSrvState of
     -1, 0: begin
-      lsService.Caption := 'Unknown';
+      lsService.Caption := '未知';
       lsService.Font.Color := clGrayText;
     end;
     SERVICE_STOPPED: begin
-      lsService.Caption := 'Stopped';
+      lsService.Caption := '已停止';
       lsService.Font.Color := clRed;
     end;
     SERVICE_START_PENDING: begin
-      lsService.Caption := 'Starting...';
+      lsService.Caption := '正在开始';
       lsService.Font.Color := clGrayText;
     end;
     SERVICE_STOP_PENDING: begin
-      lsService.Caption := 'Stopping...';
+      lsService.Caption := '停止中';
       lsService.Font.Color := clGrayText;
     end;
     SERVICE_RUNNING: begin
-      lsService.Caption := 'Running';
+      lsService.Caption := '运行中';
       lsService.Font.Color := clGreen;
     end;
     SERVICE_CONTINUE_PENDING: begin
-      lsService.Caption := 'Resuming...';
+      lsService.Caption := '正在恢复';
       lsService.Font.Color := clGrayText;
     end;
     SERVICE_PAUSE_PENDING: begin
-      lsService.Caption := 'Suspending...';
+      lsService.Caption := '正在暂停';
       lsService.Font.Color := clGrayText;
     end;
     SERVICE_PAUSED: begin
-      lsService.Caption := 'Suspended';
+      lsService.Caption := '已暂停';
       lsService.Font.Color := clWindowText;
     end;
   end;
   if IsListenerWorking then begin
-    lsListener.Caption := 'Listening';
+    lsListener.Caption := '监听中';
     lsListener.Font.Color := clGreen;
   end else begin
-    lsListener.Caption := 'Not listening';
+    lsListener.Caption := '未监听';
     lsListener.Font.Color := clRed;
   end;
   if WrapperPath = '' then begin
@@ -634,15 +634,15 @@ begin
       end;
       case CheckSupport(FV) of
         0: begin
-          lsSuppVer.Caption := '[not supported]';
+          lsSuppVer.Caption := '[不支持]';
           lsSuppVer.Font.Color := clRed;
         end;
         1: begin
-          lsSuppVer.Caption := '[supported partially]';
+          lsSuppVer.Caption := '[部分支持]';
           lsSuppVer.Font.Color := clOlive;
         end;
         2: begin
-          lsSuppVer.Caption := '[fully supported]';
+          lsSuppVer.Caption := '[完全支持]';
           lsSuppVer.Font.Color := clGreen;
         end;
       end;
@@ -695,7 +695,7 @@ end;
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if bApply.Enabled then
-    CanClose := MessageBox(Handle, 'Settings are not saved. Do you want to exit?',
+    CanClose := MessageBox(Handle, '设置未保存。退出吗？',
     'Warning', mb_IconWarning or mb_YesNo) = mrYes;
 end;
 

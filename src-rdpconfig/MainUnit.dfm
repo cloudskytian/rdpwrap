@@ -1,8 +1,8 @@
-object MainForm: TMainForm
+﻿object MainForm: TMainForm
   Left = 0
   Top = 0
   BorderStyle = bsDialog
-  Caption = 'RDP Wrapper Configuration'
+  Caption = 'RDP Wrapper '#37197#32622
   ClientHeight = 314
   ClientWidth = 404
   Color = clBtnFace
@@ -23,7 +23,7 @@ object MainForm: TMainForm
     Top = 281
     Width = 75
     Height = 25
-    Caption = 'OK'
+    Caption = #30830#23450
     ModalResult = 1
     TabOrder = 4
     OnClick = bOKClick
@@ -33,7 +33,7 @@ object MainForm: TMainForm
     Top = 281
     Width = 75
     Height = 25
-    Caption = 'Cancel'
+    Caption = #21462#28040
     ModalResult = 2
     TabOrder = 5
     OnClick = bCancelClick
@@ -43,7 +43,7 @@ object MainForm: TMainForm
     Top = 281
     Width = 75
     Height = 25
-    Caption = 'Apply'
+    Caption = #24212#29992
     Enabled = False
     TabOrder = 6
     OnClick = bApplyClick
@@ -53,11 +53,11 @@ object MainForm: TMainForm
     Top = 89
     Width = 194
     Height = 73
-    Caption = 'Authentication Mode'
+    Caption = #39564#35777#27169#24335
     Items.Strings = (
-      'GUI Authentication Only'
-      'Default RDP Authentication'
-      'Network Level Authentication')
+      #20165' GUI '#39564#35777
+      #40664#35748' RDP '#39564#35777
+      #32593#32476#32423#21035#39564#35777)
     TabOrder = 2
     OnClick = cbAllowTSConnectionsClick
   end
@@ -66,13 +66,13 @@ object MainForm: TMainForm
     Top = 168
     Width = 194
     Height = 105
-    Caption = 'Session Shadowing Mode'
+    Caption = #20250#35805#25511#21046#35774#32622
     Items.Strings = (
-      'Disable Shadowing'
-      'Full access with user'#39's permission'
-      'Full access without permission'
-      'View only with user'#39's permission'
-      'View only without permission')
+      #19981#20801#35768#36828#31243#25511#21046
+      #32463#29992#25143#25480#26435#23436#20840#25511#21046
+      #19981#32463#29992#25143#25480#26435#23436#20840#25511#21046
+      #32463#29992#25143#25480#26435#26597#30475#20250#35805
+      #19981#32463#29992#25143#25480#26435#26597#30475#20250#35805)
     TabOrder = 3
     OnClick = cbAllowTSConnectionsClick
   end
@@ -81,7 +81,7 @@ object MainForm: TMainForm
     Top = 281
     Width = 87
     Height = 25
-    Caption = 'View license...'
+    Caption = #20851#20110
     TabOrder = 7
     OnClick = bLicenseClick
   end
@@ -90,84 +90,84 @@ object MainForm: TMainForm
     Top = 6
     Width = 388
     Height = 77
-    Caption = 'Diagnostics'
+    Caption = #24403#21069#29366#24577
     TabOrder = 0
     object lListener: TLabel
       Left = 11
       Top = 55
-      Width = 70
+      Width = 72
       Height = 13
-      Caption = 'Listener state:'
+      Caption = #30417#21548#22120#29366#24577#65306
     end
     object lService: TLabel
       Left = 11
       Top = 36
-      Width = 67
+      Width = 84
       Height = 13
-      Caption = 'Service state:'
+      Caption = #36828#31243#26381#21153#29366#24577#65306
     end
     object lsListener: TLabel
-      Left = 91
+      Left = 113
       Top = 55
-      Width = 44
+      Width = 24
       Height = 13
-      Caption = 'Unknown'
+      Caption = #26410#30693
     end
     object lsService: TLabel
-      Left = 91
+      Left = 113
       Top = 36
-      Width = 44
+      Width = 24
       Height = 13
-      Caption = 'Unknown'
+      Caption = #26410#30693
     end
     object lsTSVer: TLabel
-      Left = 226
+      Left = 234
       Top = 36
-      Width = 44
+      Width = 24
       Height = 13
-      Caption = 'Unknown'
+      Caption = #26410#30693
     end
     object lsWrapper: TLabel
-      Left = 91
+      Left = 113
       Top = 17
-      Width = 44
+      Width = 24
       Height = 13
-      Caption = 'Unknown'
+      Caption = #26410#30693
     end
     object lsWrapVer: TLabel
-      Left = 226
+      Left = 234
       Top = 17
-      Width = 44
+      Width = 24
       Height = 13
-      Caption = 'Unknown'
+      Caption = #26410#30693
     end
     object lTSVer: TLabel
       Left = 202
       Top = 36
-      Width = 20
+      Width = 36
       Height = 13
-      Caption = 'ver.'
+      Caption = #29256#26412#65306
     end
     object lWrapper: TLabel
       Left = 11
       Top = 17
-      Width = 74
+      Width = 104
       Height = 13
-      Caption = 'Wrapper state:'
+      Caption = 'RDP Wrapper '#29366#24577#65306
     end
     object lWrapVer: TLabel
       Left = 202
       Top = 17
-      Width = 20
+      Width = 36
       Height = 13
-      Caption = 'ver.'
+      Caption = #29256#26412#65306
     end
     object lsSuppVer: TLabel
       Left = 202
       Top = 55
-      Width = 70
+      Width = 56
       Height = 13
-      Caption = '[support level]'
+      Caption = '['#25903#25345#32423#21035']'
     end
   end
   object gbGeneral: TGroupBox
@@ -175,30 +175,30 @@ object MainForm: TMainForm
     Top = 89
     Width = 188
     Height = 184
-    Caption = 'General Settings'
+    Caption = #19968#33324#35774#32622
     TabOrder = 1
     object lRDPPort: TLabel
       Left = 8
       Top = 44
-      Width = 47
+      Width = 40
       Height = 13
-      Caption = 'RDP port:'
+      Caption = #31471#21475#21495':'
     end
     object cbAllowTSConnections: TCheckBox
       Left = 8
       Top = 18
       Width = 132
       Height = 17
-      Caption = 'Enable Remote Desktop'
+      Caption = #21551#29992#36828#31243#26700#38754
       TabOrder = 0
       OnClick = cbAllowTSConnectionsClick
     end
     object cbSingleSessionPerUser: TCheckBox
       Left = 8
       Top = 69
-      Width = 129
+      Width = 150
       Height = 17
-      Caption = 'Single session per user'
+      Caption = #27599#20010#29992#25143#21482#20801#35768#19968#20010#20250#35805
       TabOrder = 2
       OnClick = cbAllowTSConnectionsClick
     end
@@ -207,7 +207,7 @@ object MainForm: TMainForm
       Top = 92
       Width = 149
       Height = 17
-      Caption = 'Hide users on logon screen'
+      Caption = #22312#30331#24405#30028#38754#38544#34255#29992#25143
       TabOrder = 3
       OnClick = cbAllowTSConnectionsClick
     end
@@ -227,7 +227,7 @@ object MainForm: TMainForm
       Top = 115
       Width = 169
       Height = 17
-      Caption = 'Allow to start custom programs'
+      Caption = #20801#35768#36830#25509#26102#21551#21160#31243#24207
       TabOrder = 4
       OnClick = cbAllowTSConnectionsClick
     end

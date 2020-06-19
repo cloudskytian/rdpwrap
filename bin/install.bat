@@ -1,6 +1,10 @@
 @echo off
 if not exist "%~dp0RDPWInst.exe" goto :error
-"%~dp0RDPWInst" -i -o
+"%~dp0RDPWInst" -i
+copy RDPCheck.exe "%ProgramFiles%\RDP Wrapper\"
+copy RDPConf.exe "%ProgramFiles%\RDP Wrapper\"
+copy update.bat "%ProgramFiles%\RDP Wrapper\"
+copy uninstall.bat "%ProgramFiles%\RDP Wrapper\"
 echo ______________________________________________________________
 echo.
 echo You can check RDP functionality with RDPCheck program.

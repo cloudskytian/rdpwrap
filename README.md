@@ -1,3 +1,10 @@
+﻿# 汉化及修改
+- 汉化 RDPConf.exe
+
+- 优先复制本地的 rdpwrap.ini 文件，若不存在则在线下载原作者在 GitHub 上的 ini 文件
+
+- 本人不提供 rdpwrap.ini 文件，请自行查找
+
 # RDP Wrapper Library by Stas'M
 
 [![Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/rdpwrap)
